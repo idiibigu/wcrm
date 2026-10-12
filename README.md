@@ -24,6 +24,14 @@ The deployment folder intentionally excludes `.env` files other than
 `.env.example`, installed dependencies, WhatsApp sessions, uploaded customer
 media, and bundled Google service-account key files.
 
+## Customer segments
+
+Open **Phonebook** and choose **Customer Segments · شرائح العملاء** to save
+dynamic contact segments. Rules can match contact name, mobile number,
+phonebook, or custom fields, using either all rules or any rule. Segment
+membership is recalculated from the user's current contacts whenever it is
+previewed; rules are stored per user and do not copy or delete contacts.
+
 ## First login
 
 - Admin page: `/admin`

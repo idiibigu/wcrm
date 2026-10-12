@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#075e54" />
+    <title>شرائح العملاء | WCRM by Idiibi</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/static/css/customer-segments.css" />
+    <script defer src="/static/js/customer-segments-page.js"></script>
+  </head>
+  <body>
+    <main class="segments-app">
+      <header class="segments-header">
+        <a class="segments-back" href="/user?page=phonebook">دفتر الهاتف</a>
+        <span class="segments-brand">WCRM by Idiibi</span>
+      </header>
+      <section class="segments-main">
+        <div class="segments-title">
+          <div>
+            <p class="segments-eyebrow">إدارة الجمهور</p>
+            <h1>شرائح العملاء</h1>
+            <p class="segments-intro">
+              أنشئ قواعد تحفظها مرة واحدة، وسيتغير جمهور الشريحة تلقائيًا مع جهات اتصالك.
+            </p>
+          </div>
+          <button id="segments-create" class="segments-primary" type="button">+ شريحة جديدة</button>
+        </div>
+        <div id="segments-alert" class="segments-alert" role="status" hidden></div>
+        <section id="segments-editor" class="segments-card" hidden>
+          <div class="segments-card-heading">
+            <div>
+              <h2 id="editor-heading">إنشاء شريحة</h2>
+              <p>اختر الحقول والشروط لتحديد جهات الاتصال المطابقة.</p>
+            </div>
+            <button id="segments-cancel" class="segments-icon-button" type="button" aria-label="إغلاق">×</button>
+          </div>
+          <form id="segments-form">
+            <label class="segments-field">
+              <span>اسم الشريحة</span>
+              <input id="segment-name" name="name" maxlength="150" required placeholder="مثال: العملاء المهتمون" />
+            </label>
+            <div class="segments-rule-heading">
+              <h3>شروط المطابقة</h3>
+              <label class="segments-match">
+                <span>مطابقة</span>
+                <select id="match-type" name="matchType">
+                  <option value="all">كل الشروط (و)</option>
+                  <option value="any">أي شرط (أو)</option>
+                </select>
+              </label>
+            </div>
+            <div id="segment-rules" class="segments-rules"></div>
+            <button id="add-rule" class="segments-secondary" type="button">+ إضافة شرط</button>
+            <div class="segments-preview-bar">
+              <div>
+                <strong id="preview-count">—</strong>
+                <span>جهة اتصال مطابقة الآن</span>
+              </div>
+              <button id="preview-segment" class="segments-secondary" type="button">معاينة المطابقة</button>
+            </div>
+            <div id="preview-results" class="segments-preview-results" hidden></div>
+            <div class="segments-actions">
+              <button id="save-segment" class="segments-primary" type="submit">حفظ الشريحة</button>
+              <button id="segments-cancel-bottom" class="segments-secondary" type="button">إلغاء</button>
+            </div>
+          </form>
+        </section>
+        <section id="segments-list" class="segments-list" aria-live="polite"></section>
+      </section>
+      <footer class="segments-footer">WCRM by Idiibi</footer>
+    </main>
+  </body>
+</html>

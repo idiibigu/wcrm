@@ -174,6 +174,7 @@ app.use("/api/user", require("./routes/user"));
 app.use("/api/web", require("./routes/web"));
 app.use("/api/admin", require("./routes/admin"));
 app.use("/api/phonebook", require("./routes/phonebook"));
+app.use("/api/segments", require("./routes/segments"));
 app.use("/api/chat_flow", require("./routes/chatFlow"));
 app.use("/api/inbox", require("./routes/inbox"));
 app.use("/api/templet", require("./routes/templet"));

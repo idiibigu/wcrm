@@ -2,6 +2,8 @@
   "files": {
     "main.css": "/static/css/main.e546b2bd.css",
     "main.js": "/static/js/main.d12aca39.js",
+    "static/css/customer-segments.css": "/static/css/customer-segments.css",
+    "static/js/customer-segments.js": "/static/js/customer-segments.js",
     "static/js/27.e8f9f646.chunk.js": "/static/js/27.e8f9f646.chunk.js",
     "index.html": "/index.html"
   },
